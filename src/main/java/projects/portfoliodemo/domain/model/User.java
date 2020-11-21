@@ -3,6 +3,7 @@ package projects.portfoliodemo.domain.model;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Set;
 
 @Entity
@@ -28,5 +29,5 @@ public class User {
             indexes =
             @Index(name = "users_roles_username_idx", columnList = "username")) //dopracowanie tabelki
     @Column(name = "role")
-    private Set<String> roles;
+    private Set<String> roles = new HashSet<>();
 }
