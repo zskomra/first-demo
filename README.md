@@ -2,6 +2,8 @@
 
 ---
 
-[![Build status](https://github.com/zskomra/first-demo/workflows/Build/badge.svg)](https://github.com/zskomra/first-demo/actions)
+[![Build status](https://github.com/honestit/portfolio-demo/workflows/Build/badge.svg)](https://github.com/honestit/portfolio-demo/actions)
 
 ---
+
+Building simple portfolio from scratch
