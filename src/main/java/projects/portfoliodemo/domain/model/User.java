@@ -10,7 +10,7 @@ import java.util.Set;
 @Table(name = "users")
 @Data @NoArgsConstructor @AllArgsConstructor @Builder
 @EqualsAndHashCode(of = "username")
-@ToString(exclude = "password")
+@ToString(exclude = {"password", "details"})
 public class User {
 
     @Id
@@ -30,4 +30,7 @@ public class User {
             @Index(name = "users_roles_username_idx", columnList = "username")) //dopracowanie tabelki
     @Column(name = "role")
     private Set<String> roles = new HashSet<>();
+
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL)
+    private UserDetails details;
 }
