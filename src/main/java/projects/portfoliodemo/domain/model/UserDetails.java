@@ -25,6 +25,6 @@ public class UserDetails {
 
     @OneToOne
     private User user;
-    @Column(insertable = false, updatable = false)
+    @Column(insertable = false, updatable = false, name = "user_id")
     private Long userId;
 }
